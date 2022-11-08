@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./logo.png">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./logo.png" alt="logo">
+        <section class="autonomoSection">
+            <table class="tabela1" onclick="calcular()">
+                <tr style="background-color:#ed7d31 ;">
+                    <td class="tableTitle" colspan="3">Autônomo</td>
+                </tr>
+                <tr>
+                    <td>Missão</td>
+                    <td>Qtnd</td>
+                    <td>Subtotal</td>
+                </tr>
+
+                </tr>
+                <tr>
+                    <td>Cone(s) no Terminal de mesma cor mais próximo da Estação da Aliança.</td>
+                    <td><input id="qt1" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub1">0</td>
+                </tr>
+                <tr>
+                    <td>Cone(s) na Junção Térrea:</td>
+                    <td><input id="qt2" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub2">0</td>
+                </tr>
+                <tr>
+                    <td>Cone(s) na Junção Baixa:</td>
+                    <td><input id="qt3" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub3">0</td>
+                </tr>
+
+                <tr>
+                    <td>Cone(s) na Junção Média:</td>
+                    <td><input id="qt4" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub4">0</td>
+                </tr>
+                <tr>
+                    <td>Cone(s) na Junção Alta:</td>
+                    <td><input id="qt5" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub5">0</td>
+                </tr>
+                <tr>
+                    <td>Estacionou na zona indicada pela sinalização
+                        fornecida pela Arena de Jogo:</td>
+                    <td><input value="Não" type="button" id="nao1"></td>
+                    <td id="sub6">Falso</td>
+                </tr>
+                <tr>
+                    <td>Estacionou na zona indicada pela sinalização
+                        fornecida pela Equipe:</td>
+                    <td><input value="Não" type="button" id="nao2"></td>
+                    <td id="sub7">Falso</td>
+                </tr>
+                <tr>
+                    <td>Robô estacionado dentro da Subestação da sua Aliança:</td>
+                    <td><input value="Não" type="button" id="nao3"></td>
+                    <td id="sub8">Falso</td>
+                </tr>
+                <tr>
+                    <td>Robô estacionado dentro do Terminal da sua Aliança:</td>
+                    <td><input value="Não" type="button" id="nao4"></td>
+                    <td id="sub9">Falso</td>
+                </tr>
+                <tr style="background-color:#ed7d31 ;">
+                    <td colspan="1" class="tableTitle">Pontuação Autonomo Total:</td>
+                    <td colspan="2" id="resultado">0</td>
+                </tr>
+            </table>
+
+
+
+        </section>
+
+        <section class="teleoperado">
+            <table onclick="calcularA()" class="tabela1">
+                <tr style="background-color:#ed7d31 ;">
+                    <td colspan="3" class="tableTitle">Teleoperado</td>
+                </tr>
+                <tr>
+                    <td>Missão</td>
+                    <td>Qtnd:</td>
+                    <td>Subtotal</td>
+                </tr>
+                <tr>
+                    <td>Cone(s) no terminal de mesma cor:</td>
+                    <td><input id="qt1a" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub1a">0</td>
+                </tr>
+                <tr>
+                    <td>Cone(s) nas junção térrea:</td>
+                    <td><input id="qt2a" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub2a">0</td>
+
+                </tr>
+                <tr>
+                    <td>Cone(s) na junção baixa:</td>
+                    <td><input id="qt3a" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub3a">0</td>
+
+                </tr>
+                <tr>
+                    <td>Cone(s) na Junção Média:</td>
+                    <td><input id="qt4a" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub4a">0</td>
+
+                </tr>
+                <tr>
+                    <td>Cone(s) na junção alta:</td>
+                    <td><input id="qt5a" type="number" min="0" max="50" value="0"></td>
+                    <td id="sub5a">0</td>
+
+
+
+                <tr style="background-color:#ed7d31 ;">
+                    <td colspan="2" class="tableTitle"> Pontuação Autonomo Total:</td>
+                    <td id="resultadoA">0</td>
+                </tr>
+            </table>
+
+        </section>
+        <section class="retaFinal">
+            <table class="tabela1" onclick="calcularB()">
+                <tr style="background-color:#ed7d31 ;">
+                    <td colspan="3" class="tableTitle">Reta Final</td>
+                </tr>
+                <tr>
+                    <td>Missão</td>
+                    <td>Qtnd:</td>
+                    <td>Subtotal</td>
+                </tr>
+
+
+                <tr>
+                    <td>Domínio da Junção através do último cone
+                        colocados sobre os outros:
+                    </td>
+                    <td>
+                        <input value="Não" type="button" id="nao1b">
+                    </td>
+                    <td id="sub1b">Falso</td>
+                </tr>
+                <tr>
+                    <td>Domínio da Junção através de um
+                        Sinalizador de Equipe:</td>
+                    <td>
+                        <input value="Não" type="button" id="nao2b">
+                    </td>
+                    <td id="sub2b">Falso</td>
+                </tr>
+                <tr>
+                    <td>Circuito completo:</td>
+                    <td>
+                        <input value="Não" type="button" id="nao3b">
+                    </td>
+                    <td id="sub3b">Falso</td>
+                </tr>
+                <tr>
+                    <td>Robô estacionado dentro de qualquer um dos
+                        Terminais da Aliança:</td>
+                    <td>
+                        <input value="Não" type="button" id="nao4b">
+                    </td>
+                    <td id="sub4b">Falso</td>
+                </tr>
+                <tr style="background-color:#ed7d31 ;">
+                    <td colspan="2" class="tableTitle">Pontuação Autonomo Total:</td>
+                    <td id="resultadoB">0</td>
+                </tr>
+            </table>
+        </section>
+        <footer>
+            <p>
+                Calculadora idealizada e construída pela equipe de FTC
+                FTBEN#21077
+            </p>
+
+            <div class="social-medias">
+                <a target="_blank" href="https://www.instagram.com/ftben21077/?igshid=YmMyMTA2M2Y%3D">
+                    <img src="./instagram.png" alt="Logo do Instagram">
+                    <span>@ftben21077</span>
+                </a>
+                <span>
+                <img src="./email.png" alt="Logo do E-mail">
+                ftben2021@gmail.com
+                </span>
+            </div>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
