@@ -23,7 +23,6 @@ const nao3 = document.querySelector("#nao3");
 const nao4 = document.querySelector("#nao4");
 
 //Reta Final: Variable Não
-
 const nao1b = document.querySelector("#nao1b");
 const nao2b = document.querySelector("#nao2b");
 const nao3b = document.querySelector("#nao3b");
@@ -49,11 +48,72 @@ const sub2b = document.querySelector("#sub2b");
 const sub3b = document.querySelector("#sub3b");
 const sub4b = document.querySelector("#sub4b");
 
-// Resultados
+//Resultados
 const resultado = document.querySelector("#resultado");
 const resultadoA = document.querySelector("#resultadoA");
 const resultadoB = document.querySelector("#resultadoB");
 
+//Inputs: ChangeColor
+const inputBody = document.querySelector("#inputBody");
+const inputTextColor = document.querySelector("#inputTextColor");
+const inputTitle = document.querySelector("#inputTitle");
+const inputTableBody = document.querySelector("#inputTableBody");
+
+const allP = document.querySelectorAll("p");
+const allA = document.querySelectorAll("a");
+const allSpan = document.querySelectorAll("span");
+const allH2 = document.querySelectorAll("h2");
+const tableTitle = document.querySelectorAll(".tableTitle");
+
+
+const titleChangeColor = document.querySelectorAll(".titleChangeColor");
+const text = document.querySelectorAll(".text")
+
+const teamName = document.querySelector("#teamName");
+const inputTeamName = document.querySelector("#inputTeamName");
+
+
+inputBody.addEventListener("change", () => {
+    document.body.style.backgroundColor = inputBody.value;
+});
+inputTitle.addEventListener("change", () => {
+    for (let i = 0; i < titleChangeColor.length; i++) {
+        titleChangeColor[i].style.backgroundColor = inputTitle.value;
+    }
+})
+inputTableBody.addEventListener("change", () => {
+    for (let i = 0; i < text.length; i++) {
+        text[i].style.backgroundColor = inputTableBody.value;
+    }
+})
+inputTextColor.addEventListener("change", () => {
+    for (let i = 0; i < text.length; i++) {
+        text[i].style.color = inputTextColor.value;
+    }
+    for (let i = 0; i < tableTitle.length; i++) {
+        tableTitle[i].style.color = inputTextColor.value;
+    }
+    for (let i = 0; i < allP.length; i++) {
+        allP[i].style.color = inputTextColor.value;
+    }
+    for (let i = 0; i < allA.length; i++) {
+        allA[i].style.color = inputTextColor.value;
+    }
+    for (let i = 0; i < allSpan.length; i++) {
+        allSpan[i].style.color = inputTextColor.value;
+    }
+    for (let i = 0; i < allH2.length; i++) {
+        allH2[i].style.color = inputTextColor.value;
+    }
+    resultado.style.color = inputTextColor.value;
+    resultadoA.style.color = inputTextColor.value;
+    resultadoB.style.color = inputTextColor.value;
+
+})
+
+inputTeamName.addEventListener("change", () => {
+    teamName.textContent = `- ${inputTeamName.value} -`
+})
 sub6.value = 0;
 sub7.value = 0;
 sub8.value = 0;
